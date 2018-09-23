@@ -15,4 +15,9 @@ $(document).ready(function() {
       }
     });
   });
+
+  var date=new Date(),
+  year = date.getFullYear(),
+  text = "Copyright &copy; " + year + " Akinwale Agbaje";
+  $("#copyright-output").html(text);
 });
