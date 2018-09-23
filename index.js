@@ -77,11 +77,11 @@ app.get("*", (req, res, next) => {
 })
 
 // set public folder
-app.use("/app2", express.static(path.join(__dirname, "public")));
-app.use('/app2/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
-app.use('/app2/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
-app.use('/app2/js', express.static(__dirname + '/node_modules/popper.js/dist')); // redirect JS Popper
-app.use('/app2/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
+app.use(express.static(path.join(__dirname, "public")));
+app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
+app.use('/js', express.static(__dirname + '/node_modules/jquery/dist')); // redirect JS jQuery
+app.use('/js', express.static(__dirname + '/node_modules/popper.js/dist')); // redirect JS Popper
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstrap
 
 // Bring in Models
 let Article = require("./models/article");
